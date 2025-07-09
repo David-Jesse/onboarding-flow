@@ -1,0 +1,227 @@
+/* business card */
+.business-card {
+  width: 100%;
+  background-color: var(--light-grey);
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.business-card .card-header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.business-card .card-header .logo {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.business-card .card-header .website-url-prefix {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--light-grey-5);
+  margin-bottom: 15px;
+}
+
+.business-card .card-header .website-url-prefix::before {
+  content: "https://";
+  color: var(--light-grey-5);
+  width: max-content;
+}
+
+.business-card .card-header .company-name {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--dark-grey);
+}
+
+.business-card .card-body {
+  background-color: white;
+  padding: 20px 20px 10px 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 2;
+}
+
+.business-card .card-body .footer-text {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--light-grey-5);
+  margin-top: 10px;
+  text-align: center;
+}
+
+.business-card .card-body .footer-text span {
+  font-weight: 600;
+  color: var(--dark-grey);
+}
+
+/* typing effect on message */
+.business-card .card-body .typing {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  background-color: var(--light-grey-2);
+  color: var(--light-grey-6);
+  border-radius: 15px 10px 10px 0;
+}
+
+.business-card .card-body .typing span {
+  width: 5px;
+  height: 5px;
+  background-color: var(--light-grey-3);
+  border-radius: 50%;
+  animation: typing-bounce 1.8s infinite ease-in-out;
+}
+
+.business-card .card-body .typing span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.business-card .card-body .typing span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.business-card .card-body .typing span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+/* typing effect on reverse message */
+.business-card .card-body .typing.reverse {
+  border-radius: 15px 18px 4px 15px;
+  margin-left: auto;
+}
+
+.business-card .card-body .message {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 5px;
+}
+
+/* reverse message replies to the right */
+.business-card .card-body .message.reverse {
+  flex-direction: row-reverse;
+  margin-left: auto;
+}
+
+/* message text */
+.business-card .card-body .message .text {
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 18px 15px 15px 4px;
+  padding: 5px 10px;
+  background-color: var(--light-grey-2);
+  color: var(--light-grey-6);
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+/* reverse text replies */
+.business-card .card-body .message.reverse .text {
+  border-radius: 15px 18px 4px 15px;
+  background-color: var(--dark-grey);
+  color: rgb(224, 224, 224);
+}
+
+/* message image */
+.business-card .card-body .message .logo {
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  background-color: var(--light-grey-3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--light-grey-2);
+  color: var(--dark-grey-1);
+  font-weight: 550;
+}
+
+.business-card .card-body .message .logo svg {
+  width: 13px;
+  height: 13px;
+}
+
+.business-card .card-body .message .logo:has(svg) {
+  background-color: white;
+}
+
+@keyframes typing-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-4px);
+  }
+  30% {
+    transform: translateY(0px);
+  }
+  40% {
+    transform: translateY(-1px);
+  }
+  50%,
+  60%,
+  100% {
+    transform: translateY(0); /* pauses the animation */
+  }
+}
+
+.card-wrapper {
+  max-width: 400px;
+  width: 100%;
+  position: relative;
+}
+
+.card-wrapper .footer-logo {
+  position: absolute;
+  bottom: -55px;
+  right: 0;
+  background: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-wrapper .footer-logo svg {
+  width: 15px;
+}
+
+@media (max-width: 600px) {
+  .business-card {
+    padding: 10px;
+  }
+  .business-card .card-body {
+    padding: 10px;
+  }
+  .business-card .card-body .footer-text {
+    font-size: 10px;
+  }
+  .business-card .card-body .message .text {
+    font-size: 12px;
+  }
+}
