@@ -23,6 +23,7 @@ const CustomInput = ({
 
   // updateCaret uses value and refs, so we memoize it based on value
   const updateCaret = useCallback(() => {
+// sourcery skip: use-braces
     if (!inputRef.current || !overlayRef.current || !InputCaretRef.current)
       return;
 
