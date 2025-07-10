@@ -45,6 +45,10 @@
   stroke: var(--dark-grey-2);
 }
 
+.btn.back:hover {
+    background: var(--light-grey-2);
+}
+
 .btn.gradient-border {
   font-weight: 500;
   border: 2px solid transparent;
