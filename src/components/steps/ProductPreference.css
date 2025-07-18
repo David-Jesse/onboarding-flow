@@ -1,0 +1,77 @@
+.product-preference-step {
+  padding: 2rem;
+  /* margin: 0 auto; */
+}
+
+.onboarding-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.product-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #374151;
+  background-color: #ffffff;
+}
+
+.product:hover {
+  border-color: #d1d5db;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.product span {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+/* Selected state - combine all selected styles in one rule */
+.product.selected {
+  background-color: #87ceeb;
+  border-color: #5dade2;
+  color: #ffffff;
+  font-weight: 600;
+  animation: selectPulse 0.3s ease-out;
+}
+
+/* Hover effect on selected products - removes background */
+.product.selected:hover {
+  background-color: transparent !important;
+  color: #374151 !important;
+  border-color: #87ceeb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes selectPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

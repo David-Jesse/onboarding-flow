@@ -1,0 +1,27 @@
+.get-started-step {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.get-started-step h2 {
+    font-size: 2.1rem;
+    text-align: center;
+}
+
+ .agreement-text p{
+    font-size: 0.8rem;
+    text-align: center;
+    max-width: 450px;
+}
+
+.centered-custom-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}

@@ -3,6 +3,7 @@ import Button from "../ui/Button";
 import { useEffect } from "react";
 import ActionWithHint from "../ui/ActionWithHint";
 import HintEnter from "../ui/HintEnter";
+import "./ProductPreference.css";
 
 interface ProductPreferenceProps {
   formData: { ProductPreference: string[] };
@@ -44,7 +45,7 @@ const ProductPreferenceStep = ({
       ? current.filter((prev) => prev !== product)
       : [...current, product];
 
-    onChange("productPreference", updated);
+    onChange("ProductPreference", updated);
   };
 
   // Handle enter key press

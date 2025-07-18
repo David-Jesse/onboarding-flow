@@ -4,7 +4,7 @@ import ActionWithHint from "../ui/ActionWithHint";
 import HintEnter from "../ui/HintEnter";
 
 interface WebsiteUrlsProps {
-  formData: { webssiteUrl: string };
+  formData: { websiteUrl: string };
   onChange: (field: string, value: string) => void;
   nextStep: () => void;
   prevStep: () => void;
@@ -25,7 +25,7 @@ function WebsiteUrlStep({
         <div className="prefix-with-input">
           <div className="website-prefix">https://</div>
           <CustomInput
-            value={formData.webssiteUrl}
+            value={formData.websiteUrl}
             onValueChange={(value) => onChange("websiteUrl", value)}
             required={true}
             onEnterPress={nextStep}

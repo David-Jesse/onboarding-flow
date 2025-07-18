@@ -27,6 +27,9 @@ const OnBoardingStepsAnimation = ({
         key={currentStep}
         className="step-motion-container"
         variants={currentStep === 0 ? firstStepVariants : fadeVariants}
+        initial="initial"
+        animate="animate"
+        exit="exit"
       >
         {children}
       </motion.div>

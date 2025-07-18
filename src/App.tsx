@@ -1,10 +1,10 @@
-import React from 'react';
-import './App.css';
+import OnboardingFlow from "./components/OnboardingFlow";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <h1>Hey there!</h1>
+      <OnboardingFlow />
     </div>
   );
 }

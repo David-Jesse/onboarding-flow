@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import ActionWithHint from "../ui/ActionWithHint";
 import Button from "../ui/Button";
 import HintEnter from "../ui/HintEnter";
+import './PlatformStep.css'
 
 interface PlatformStepProps {
   formData: { platform: string };
