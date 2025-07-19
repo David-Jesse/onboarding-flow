@@ -27,7 +27,7 @@ function EmailStep({
             required
           />
         </div>
-        <Button variant="primary" onClick={nextStep} text="Get Started" />
+        <Button variant="primary" onClick={nextStep} text="Get Started"/>
 
         <p className="agreement-text">
           By clicking on the button above, you agree to our terms of use and
